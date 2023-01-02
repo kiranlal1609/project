@@ -22,7 +22,7 @@ const showPrice = (coinData)=>{
     const vol = coinData.volume;
     const change = coinData.priceChange1d;
     const coin = coinData.name;
-    const curr = 'USD';
+    const curr = 'INR';
     var col= "green";
     if(change<0){
         col = "red";
