@@ -12,7 +12,7 @@ form.addEventListener('submit',(e)=>{
 });
 
 const fetchPrice = async(ctype) =>{
-    const r = await axios.get(`https://api.coinstats.app/public/v1/coins/${ctype}?currency=INR`);
+    const r = await axios.get(`https://api.coinstats.app/public/v1/coins/${ctype}?currency=USD`);
     showPrice(r.data.coin);
 }
 
@@ -22,7 +22,7 @@ const showPrice = (coinData)=>{
     const vol = coinData.volume;
     const change = coinData.priceChange1d;
     const coin = coinData.name;
-    const curr = 'INR';
+    const curr = 'USD';
     var col= "green";
     if(change<0){
         col = "red";
